@@ -42,11 +42,9 @@
 
   .pages {
     display: flex;
-    flex-grow: 1;
-    gap: 5rem;
-    justify-content: center;
     list-style: none;
     margin: 0;
+    padding: 0;
   }
 
   .pages > li {
