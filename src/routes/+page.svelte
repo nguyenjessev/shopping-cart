@@ -1,1 +1,44 @@
-<h1>Hello, world!</h1>
+<script>
+  import bicycle from '$lib/images/bg-bicycle.jpg';
+</script>
+
+<main class="homepage">
+  <header>
+    <h1>Go faster.</h1>
+    <p>Conquer the toughest climbs and fastest descents with ease.</p>
+    <a href="/shop">Shop the collection ></a>
+    <img src={bicycle} alt="test" />
+  </header>
+</main>
+
+<style>
+  .homepage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: -12%;
+    max-width: 100%;
+    z-index: -1;
+  }
+
+  a {
+    color: hsl(207, 100%, 70%);
+    text-decoration: none;
+  }
+</style>

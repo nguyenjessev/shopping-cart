@@ -31,7 +31,7 @@
     color: white;
     display: flex;
     font-size: 1.2rem;
-    height: 10vmin;
+    height: 8vmin;
     justify-content: space-between;
   }
 

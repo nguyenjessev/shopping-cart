@@ -3,6 +3,17 @@
   import './styles.css';
 </script>
 
-<Navbar />
+<div class="container">
+  <header>
+    <Navbar />
+  </header>
 
-<slot />
+  <slot />
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
