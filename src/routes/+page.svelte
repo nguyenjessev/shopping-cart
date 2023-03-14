@@ -13,10 +13,6 @@
 
 <style>
   .homepage {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
     padding: 2rem;
   }
 
@@ -34,6 +30,7 @@
   img {
     margin-top: -12%;
     max-width: 100%;
+    min-width: 600px;
     z-index: -1;
   }
 

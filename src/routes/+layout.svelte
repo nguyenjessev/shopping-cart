@@ -15,5 +15,8 @@
   .container {
     display: flex;
     flex-direction: column;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow: hidden;
   }
 </style>
