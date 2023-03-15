@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 
 export const products = writable([
   {
@@ -39,3 +39,13 @@ export const products = writable([
 ]);
 
 export const bagItems = writable(new Map());
+
+export const bagSubtotal = derived(bagItems, ($bagItems) => {
+  let subtotal = 0;
+
+  $bagItems.forEach((value, key) => {
+    subtotal += value * key.price;
+  });
+
+  return subtotal;
+});
