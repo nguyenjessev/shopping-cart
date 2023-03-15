@@ -15,6 +15,26 @@
       return bag;
     });
   };
+
+  const increment = (item) => {
+    bagItems.update((bag) => {
+      bag.set(item, bag.get(item) + 1);
+
+      return bag;
+    });
+  };
+
+  const decrement = (item) => {
+    bagItems.update((bag) => {
+      if (bag.get(item) <= 1) {
+        bag.delete(item);
+      } else {
+        bag.set(item, bag.get(item) - 1);
+      }
+
+      return bag;
+    });
+  };
 </script>
 
 <div class="bag-item-row">
@@ -30,9 +50,13 @@
       >
     </div>
     <div class="quantity-controls">
-      <div class="quantity-control"><i class="fa-solid fa-angle-up" /></div>
+      <button class="quantity-control" on:click={increment(product)}
+        ><i class="fa-solid fa-angle-up" /></button
+      >
       <div class="quantity">x{$bagItems.get(product)}</div>
-      <div class="quantity-control"><i class="fa-solid fa-angle-down" /></div>
+      <button class="quantity-control" on:click={decrement(product)}
+        ><i class="fa-solid fa-angle-down" /></button
+      >
     </div>
   </div>
 </div>
@@ -89,6 +113,8 @@
   }
 
   .quantity-controls > * {
+    background-color: transparent;
+    border: none;
     flex-grow: 1;
   }
 
