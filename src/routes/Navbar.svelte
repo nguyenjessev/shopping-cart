@@ -18,8 +18,8 @@
       <a href="/shop" class="nav-link">Shop</a>
     </li>
   </ul>
-  <div class:selected={$page.route.id === '/cart'}>
-    <a href="/cart" class="nav-link cart"
+  <div class:selected={$page.route.id === '/bag'}>
+    <a href="/bag" class="nav-link bag"
       ><i class="fa-solid fa-bag-shopping" /></a
     >
   </div>
