@@ -7,6 +7,14 @@
     style: 'currency',
     currency: 'USD',
   });
+
+  const removeItem = (item) => {
+    bagItems.update((bag) => {
+      bag.delete(item);
+
+      return bag;
+    });
+  };
 </script>
 
 <div class="bag-item-row">
@@ -17,7 +25,9 @@
     <div>
       <h3 class="product-name">{product.name}</h3>
       <div class="product-price">{formatter.format(product.price)}</div>
-      <span class="remove-bag-item">Remove</span>
+      <button class="remove-bag-item" on:click={removeItem(product)}
+        >Remove</button
+      >
     </div>
     <div class="quantity-controls">
       <div class="quantity-control"><i class="fa-solid fa-angle-up" /></div>
@@ -60,8 +70,11 @@
   }
 
   .remove-bag-item {
+    background-color: transparent;
+    border: none;
     color: hsl(0, 80%, 50%);
     font-size: 0.7rem;
+    padding: 0;
   }
 
   .remove-bag-item:hover {
