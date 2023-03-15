@@ -8,7 +8,7 @@
     <h1>Go faster.</h1>
     <p>Conquer the toughest climbs and fastest descents with ease.</p>
     <a href="{base}/shop">Shop the collection ></a>
-    <img src={bicycle} alt="test" />
+    <img src={bicycle} alt="Bicycle" />
   </header>
 </main>
 
