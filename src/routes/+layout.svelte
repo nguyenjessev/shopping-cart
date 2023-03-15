@@ -1,6 +1,6 @@
 <script>
+  import '$lib/styles.css';
   import Navbar from './Navbar.svelte';
-  import './styles.css';
 </script>
 
 <svelte:head>
