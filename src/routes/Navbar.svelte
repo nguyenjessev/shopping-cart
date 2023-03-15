@@ -76,11 +76,11 @@
   .bag-counter {
     background-color: hsl(0, 80%, 50%);
     border-radius: 100px;
-    bottom: 10%;
     display: grid;
     font-size: 0.6rem;
     height: 1.2rem;
-    left: 10%;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
     min-width: 1.2rem;
     padding: 0.2rem;
     place-items: center;
