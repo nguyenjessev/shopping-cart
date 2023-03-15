@@ -17,6 +17,7 @@
     <div>
       <h3 class="product-name">{product.name}</h3>
       <div class="product-price">{formatter.format(product.price)}</div>
+      <span class="remove-bag-item">Remove</span>
     </div>
     <div class="quantity-controls">
       <div class="quantity-control"><i class="fa-solid fa-angle-up" /></div>
@@ -56,6 +57,16 @@
 
   .product-name {
     margin: 0;
+  }
+
+  .remove-bag-item {
+    color: hsl(0, 80%, 50%);
+    font-size: 0.7rem;
+  }
+
+  .remove-bag-item:hover {
+    color: hsl(0, 90%, 40%);
+    cursor: pointer;
   }
 
   .quantity-controls {
