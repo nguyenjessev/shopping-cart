@@ -7,13 +7,13 @@
     <meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout.67a2320d.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/_page.a724a394.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.591c70ce.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.c409f171.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.54b01e36.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.2af475ba.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.5c8aaab8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.2f90ce84.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.02cce0df.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.19877a71.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.5d3af750.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.19803b0b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.8718942c.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.eff75702.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/stores.01825817.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.js.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
@@ -25,9 +25,9 @@
 
 
 
-<div class="container svelte-1lja8az"><header><nav class="svelte-g5ztlo"><ul class="pages svelte-g5ztlo"><li class="svelte-g5ztlo"><a href="" class="nav-link svelte-g5ztlo">Home</a></li>
-    <li class="svelte-g5ztlo selected"><a href="/shop" class="nav-link svelte-g5ztlo">Shop</a></li></ul>
-  <div class="bag-link-container svelte-g5ztlo"><a href="/bag" class="nav-link bag svelte-g5ztlo">
+<div class="container svelte-1lja8az"><header><nav class="svelte-g5ztlo"><ul class="pages svelte-g5ztlo"><li class="svelte-g5ztlo"><a href="." class="nav-link svelte-g5ztlo">Home</a></li>
+    <li class="svelte-g5ztlo selected"><a href="./shop" class="nav-link svelte-g5ztlo">Shop</a></li></ul>
+  <div class="bag-link-container svelte-g5ztlo"><a href="./bag" class="nav-link bag svelte-g5ztlo">
       <i class="fa-solid fa-bag-shopping"></i></a></div>
 </nav></header>
 
@@ -67,8 +67,9 @@
 			
 			<script>
 				{
-					__sveltekit_1imq0gq = {
+					__sveltekit_1448f4v = {
 						env: {},
+						assets: "/shopping-cart",
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
 					};
@@ -76,10 +77,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.591c70ce.js"),
-						import("./_app/immutable/entry/app.19877a71.js")
+						import("./_app/immutable/entry/start.c409f171.js"),
+						import("./_app/immutable/entry/app.8718942c.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1imq0gq.element, {
+						kit.start(app, __sveltekit_1448f4v.element, {
 							node_ids: [0, 4],
 							data,
 							form: null,
