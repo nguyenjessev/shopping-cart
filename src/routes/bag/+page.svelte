@@ -1,6 +1,21 @@
 <script>
   import { bagItems } from '$lib/stores.js';
   import BagItem from './BagItem.svelte';
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  const calculateSubtotal = () => {
+    let total = 0;
+
+    $bagItems.forEach((value, key) => {
+      total += value * key.price;
+    });
+
+    return total;
+  };
 </script>
 
 <div class="container">
@@ -13,6 +28,13 @@
         {#each [...$bagItems] as bagItem}
           <BagItem product={bagItem[0]} />
         {/each}
+        <div class="bag-footer">
+          <div class="subtotal">
+            <strong>Subtotal:</strong>
+            {formatter.format(calculateSubtotal())}
+          </div>
+          <button>Checkout</button>
+        </div>
       {/if}
     </div>
   </div>
@@ -40,5 +62,10 @@
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
+  }
+
+  .bag-footer {
+    display: flex;
+    justify-content: space-between;
   }
 </style>
