@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import bicycle from '$lib/images/bg-bicycle.jpg';
 </script>
 
@@ -6,7 +7,7 @@
   <header>
     <h1>Go faster.</h1>
     <p>Conquer the toughest climbs and fastest descents with ease.</p>
-    <a href="/shop">Shop the collection ></a>
+    <a href="{base}/shop">Shop the collection ></a>
     <img src={bicycle} alt="test" />
   </header>
 </main>

@@ -1,19 +1,20 @@
 <script>
   import { page } from '$app/stores';
   import { bagItems } from '$lib/stores.js';
+  import { base } from '$app/paths';
 </script>
 
 <nav>
   <ul class="pages">
     <li class:selected={$page.route.id === '/'}>
-      <a href="/" class="nav-link">Home</a>
+      <a href={base} class="nav-link">Home</a>
     </li>
     <li class:selected={$page.route.id === '/shop'}>
-      <a href="/shop" class="nav-link">Shop</a>
+      <a href="{base}/shop" class="nav-link">Shop</a>
     </li>
   </ul>
   <div class="bag-link-container" class:selected={$page.route.id === '/bag'}>
-    <a href="/bag" class="nav-link bag">
+    <a href="{base}/bag" class="nav-link bag">
       {#if $bagItems.size}
         <div class="bag-counter">{$bagItems.size}</div>
       {/if}
