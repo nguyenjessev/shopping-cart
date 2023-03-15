@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { bagItems } from '$lib/stores.js';
 </script>
 
 <nav>
@@ -11,10 +12,13 @@
       <a href="/shop" class="nav-link">Shop</a>
     </li>
   </ul>
-  <div class:selected={$page.route.id === '/bag'}>
-    <a href="/bag" class="nav-link bag"
-      ><i class="fa-solid fa-bag-shopping" /></a
-    >
+  <div class="bag-link-container" class:selected={$page.route.id === '/bag'}>
+    <a href="/bag" class="nav-link bag">
+      {#if $bagItems.size}
+        <div class="bag-counter">{$bagItems.size}</div>
+      {/if}
+      <i class="fa-solid fa-bag-shopping" />
+    </a>
   </div>
 </nav>
 
@@ -40,7 +44,8 @@
     padding: 0;
   }
 
-  .pages > li {
+  .pages > li,
+  .bag-link-container {
     position: relative;
   }
 
@@ -48,7 +53,7 @@
     align-items: center;
     display: flex;
     height: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .selected::before {
@@ -57,5 +62,25 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .bag {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .bag-counter {
+    background-color: hsl(0, 80%, 50%);
+    border-radius: 100px;
+    bottom: 10%;
+    display: grid;
+    font-size: 0.6rem;
+    height: 1.2rem;
+    left: 10%;
+    min-width: 1.2rem;
+    padding: 0.2rem;
+    place-items: center;
+    position: absolute;
   }
 </style>
