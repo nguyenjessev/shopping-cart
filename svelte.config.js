@@ -1,7 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 
-const dev = process.argv.includes('dev');
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
@@ -15,9 +13,6 @@ const config = {
       precompress: false,
       strict: true,
     }),
-    paths: {
-      base: dev ? '' : '/shopping-cart',
-    },
   },
 };
 

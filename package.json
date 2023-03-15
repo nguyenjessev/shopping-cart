@@ -8,7 +8,9 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "format": "prettier --plugin-search-dir . --write .",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d build -t true"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
