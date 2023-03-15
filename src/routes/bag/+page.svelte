@@ -36,6 +36,9 @@
   .bag-items {
     background: hsl(40, 50%, 95%);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 2rem;
   }
 </style>
