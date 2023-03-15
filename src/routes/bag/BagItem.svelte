@@ -18,7 +18,11 @@
       <h3 class="product-name">{product.name}</h3>
       <div class="product-price">{formatter.format(product.price)}</div>
     </div>
-    <div class="quantity-controls">Qty: {$bagItems.get(product)}</div>
+    <div class="quantity-controls">
+      <div class="quantity-control"><i class="fa-solid fa-angle-up" /></div>
+      <div class="quantity">x{$bagItems.get(product)}</div>
+      <div class="quantity-control"><i class="fa-solid fa-angle-down" /></div>
+    </div>
   </div>
 </div>
 
@@ -52,5 +56,24 @@
 
   .product-name {
     margin: 0;
+  }
+
+  .quantity-controls {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quantity-controls > * {
+    flex-grow: 1;
+  }
+
+  .quantity-control {
+    color: hsl(210, 80%, 50%);
+  }
+
+  .quantity-control:hover {
+    color: hsl(210, 90%, 40%);
+    cursor: pointer;
   }
 </style>

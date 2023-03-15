@@ -3,6 +3,13 @@
   import './styles.css';
 </script>
 
+<svelte:head>
+  <script
+    src="https://kit.fontawesome.com/e1eee56c5f.js"
+    crossorigin="anonymous"
+  ></script>
+</svelte:head>
+
 <div class="container">
   <header>
     <Navbar />

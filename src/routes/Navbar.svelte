@@ -2,13 +2,6 @@
   import { page } from '$app/stores';
 </script>
 
-<svelte:head>
-  <script
-    src="https://kit.fontawesome.com/e1eee56c5f.js"
-    crossorigin="anonymous"
-  ></script>
-</svelte:head>
-
 <nav>
   <ul class="pages">
     <li class:selected={$page.route.id === '/'}>

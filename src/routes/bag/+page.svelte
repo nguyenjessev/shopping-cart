@@ -33,7 +33,7 @@
             <strong>Subtotal:</strong>
             {formatter.format(calculateSubtotal())}
           </div>
-          <button>Checkout</button>
+          <button class="checkout-btn">Checkout</button>
         </div>
       {/if}
     </div>
@@ -57,7 +57,9 @@
 
   .bag-items {
     background: hsl(40, 50%, 95%);
+    border: 1px solid hsl(207, 95%, 8%);
     border-radius: 10px;
+    box-shadow: -8px 8px 20px -8px hsl(207, 95%, 8%);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -65,7 +67,23 @@
   }
 
   .bag-footer {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .checkout-btn {
+    background-color: hsl(210, 80%, 50%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+  }
+
+  .checkout-btn:hover {
+    background-color: hsl(210, 90%, 40%);
+    cursor: pointer;
   }
 </style>

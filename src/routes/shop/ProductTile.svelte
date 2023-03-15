@@ -54,15 +54,16 @@
   }
 
   .add-to-bag-btn {
-    background-color: hsl(113, 39%, 46%);
+    background-color: hsl(210, 80%, 50%);
     border: none;
     border-radius: 10px;
+    color: white;
     font-weight: bold;
     padding: 1rem;
   }
 
   .add-to-bag-btn:hover {
-    background-color: hsl(113, 49%, 46%);
+    background-color: hsl(210, 90%, 40%);
     cursor: pointer;
   }
 </style>
