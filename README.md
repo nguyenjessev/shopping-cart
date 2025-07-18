@@ -1,3 +1,5 @@
+[Live Demo](https://nguyenjessev.github.io/shopping-cart/)
+
 # Shopping Cart
 
 This is a simple shopping site demo built in Svelte
