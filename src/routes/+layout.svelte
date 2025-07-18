@@ -5,7 +5,7 @@
 
 <svelte:head>
   <script
-    src="https://kit.fontawesome.com/e1eee56c5f.js"
+    src="https://kit.fontawesome.com/a5c020bdad.js"
     crossorigin="anonymous"
   ></script>
 </svelte:head>
